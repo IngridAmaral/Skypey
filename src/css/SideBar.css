@@ -1,9 +1,10 @@
 .SideBar {
-    width: 40%;
+    width: 25%;
     background-color: rgba(32, 32, 35, 1);
     height: 100%;
     border-right: 1px solid rgba(189, 189,192, 0.1);
     transition: width 0.3s;
+    color: #fff;
 }
 
 @media (min-width: 576px) {
