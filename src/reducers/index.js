@@ -8,5 +8,4 @@ export default combineReducers({
     user,
     contacts,
     activeUserId,
-    
 })

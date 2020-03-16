@@ -1,6 +1,5 @@
 import React from 'react';
 import '../css/Empty.css';
-import { state } from '../static-data';
 
 class Empty extends React.Component {
     render() {
@@ -8,8 +7,8 @@ class Empty extends React.Component {
         const first_name = name.split(' ')[0];
         return (
             <div className='Empty'>
-                <h1 className='Empty_name'>Hello, {first_name}</h1>
-                <img src={profile_pic} alt={name} />
+                <h1 className='Empty_name'>Welcome, {first_name}</h1>
+                <img className='Empty_img' src={profile_pic} alt={name} />
                 <p className='Empty_status'>
                     <b>Status:</b> {status}
                 </p>

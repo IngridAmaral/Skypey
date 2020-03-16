@@ -3,9 +3,10 @@ import '../css/ChatWindow.css';
 
 class ChatWindow extends React.Component {
     render() {
+        const { activeUserId } = this.props
         return (
             <div className='ChatWindow'>
-                ChatWindow
+                Conversation for user id: {activeUserId}
             </div>
         )
     }
