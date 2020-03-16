@@ -4,15 +4,18 @@ import store from "../store";
 import Header from "./ChatWindow/Header";
 import MessageInput from "./ChatWindow/MessageInput";
 import Chat from "./ChatWindow/Chat";
+import _ from "lodash";
 
 class ChatWindow extends React.Component {
     render() {
         const { activeUserId } = this.props;
-        const activeUser = store.getState().contacts[activeUserId];
-
+        const state = store.getState();
+        const activeUser = state.contacts[activeUserId];
+        const activeMessages = state.messages[activeUserId];
         return (
             <div className='ChatWindow'>
                 <Header user={activeUser} />
+                <Chat messages={_.values(activeMessages)} />
             </div>
         )
     }
