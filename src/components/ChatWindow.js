@@ -12,7 +12,7 @@ class ChatWindow extends React.Component {
         const state = store.getState();
         const activeUser = state.contacts[activeUserId];
         const activeMessages = state.messages[activeUserId];
-        const { typing } = state
+        const { typing } = state;
         return (
             <div className='ChatWindow'>
                 <Header user={activeUser} />

@@ -5,7 +5,6 @@ import { setActiveUserId } from "../actions";
 
 class User extends React.Component {
     handleClick = (id) => {
-        console.log(id)
         store.dispatch(setActiveUserId(id));
     }
     

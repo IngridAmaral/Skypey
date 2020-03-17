@@ -1,6 +1,4 @@
 import { SEND_MESSAGE,SET_ACTIVE_USER_ID, SET_TYPING_VALUE } from "./action-types";
-import typing from "../reducers/typingReducer";
-import activeUserId from "../reducers/activeUserIdReducer";
 
 export const setActiveUserId = id => ({
     type: SET_ACTIVE_USER_ID,

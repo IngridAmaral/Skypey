@@ -9,7 +9,7 @@ class Main extends React.Component {
         
         if (!activeUserId) {
             return (
-                <Empty user={user} activeUserId={activeUserId} />
+                <Empty user={user} />
             )
         } else {
             return (
