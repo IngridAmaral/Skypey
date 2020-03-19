@@ -20,7 +20,6 @@
     -o-transition: .6s;
     transition: .6s;
     opacity: 1;
-    /* visibility: visible;  */
 }
 
 .Chat_div.delete_rigth {
@@ -30,7 +29,6 @@
 
 .Chat_div.hide {
     opacity: 0;
-    /* visibility: hidden;  */
 }
 
 .delete_user_msg, .delete_msg {

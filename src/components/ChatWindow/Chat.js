@@ -22,9 +22,6 @@ class Chat extends React.Component {
         this.scrollBottom();
     }
 
-    componentWillUnmount() {
-    }
-
     scrollBottom = () => {
         if (!this.state.togleDelete) {
             this.chatRef.current.scrollTop = this.chatRef.current.scrollHeight;
@@ -49,14 +46,11 @@ class Chat extends React.Component {
         setTimeout(() => {
             store.dispatch(deleteMessage(activeUserId, number));
             this.setState({ hide: false, messageNum: null });
-        }, 500);
-        
+        }, 400);   
     }
 
     render() {
         const { togleDelete, messageNum, hide } = this.state;
-        console.log('-----------------------')
-
         return (
             <div className='Chats' ref={this.chatRef}>
                 {this.props.messages.map(message => {
@@ -66,8 +60,6 @@ class Chat extends React.Component {
                     const hideTransition = messageNum === message.number && hide ? 'hide' : '';
 
                     const isUserMsg = is_user_msg ? 'is_user_msg' : '';
-
-                    console.log( 'hideTransition: ', hideTransition, 'compa: ', messageNum, message.number);
 
                     return (
                         <div className={`Chat_div  ${hideTransition} ${is_user_msg ? 'delete_rigth' : ''}`}>
