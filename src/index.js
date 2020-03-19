@@ -4,15 +4,12 @@ import App from './containers/App';
 import './css/index.css';
 import store from './store';
 
-const fancyLog = () => {
-    console.log(store.getState())
-}
-
 const render = () => { 
-    fancyLog();
+    //console.log(store.getState())
     ReactDOM.render(<App />, document.querySelector('#root'));
 }
 render();
+
 
 store.subscribe(render)
 

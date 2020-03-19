@@ -6,6 +6,58 @@
     width: 85%;
     margin: 0 auto;
     overflow-y: scroll;
+    padding: 0;
+}
+
+.Chat_div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 94%;
+    color: #fff;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    -o-transition: .6s;
+    transition: .6s;
+    opacity: 1;
+    /* visibility: visible;  */
+}
+
+.Chat_div.delete_rigth {
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.Chat_div.hide {
+    opacity: 0;
+    /* visibility: hidden;  */
+}
+
+.delete_user_msg, .delete_msg {
+    border-radius: 50px;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: red;
+    border-style: none;
+    cursor: pointer;
+    margin: 1rem;
+    text-align: center;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+}
+
+.delete_user_msg {
+    flex: 2;
+    justify-self: flex-end;
+}
+
+.delete_user_msg:hover, .delete_msg:hover {
+    border: 1px solid #fff;
+}
+
+.delete_msg {
+    margin-left: 1rem;
 }
 
 .Chat {
@@ -17,11 +69,10 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
-
+    cursor: pointer;
 }
 
 .Chat.is_user_msg {
-    margin-left: auto;
     background: #2b2c33;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 0;

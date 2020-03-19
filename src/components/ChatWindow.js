@@ -16,7 +16,7 @@ class ChatWindow extends React.Component {
         return (
             <div className='ChatWindow'>
                 <Header user={activeUser} />
-                <Chat messages={_.values(activeMessages)} />
+                <Chat messages={_.values(activeMessages)} activeUserId={activeUserId} />
                 <MessageInput value={typing} />
             </div>
         )
